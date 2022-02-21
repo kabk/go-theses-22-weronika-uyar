@@ -1,0 +1,187 @@
+/*HEADER*/
+.header {
+    font-family: sans-serif;
+    font-size: 20pt;
+    margin: auto;
+    top:0;
+    position: fixed;
+    background-color: white;  
+    z-index: 95;
+    padding-bottom:5px;  
+    width: 100vw;
+}
+
+/*BODY*/
+
+.intro {
+  display:block;
+  width:100vh;
+  height:100vh; 
+  
+}
+
+.colorblock{
+    background: linear-gradient(180deg, white, #006fff, #afff00, #ff6300, #7d00ff, #ff0000);
+    background-size: 400% 400%;
+    height: 100vh;
+    margin: auto;
+
+    -webkit-animation: gradient 120s ease infinite;
+    -moz-animation: gradient 120s ease infinite;
+    animation: gradient 120s ease infinite;
+}
+
+@-webkit-keyframes gradient {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+@-moz-keyframes gradient {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+@keyframes gradient {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+
+/*IMAGES*/
+.images {
+    width: 200px;
+    filter: blur(10px);
+  -webkit-filter: blur(10px);
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+   
+    }
+
+#imagesubtitle {
+  width: 200px;
+  display: block;
+margin-top: 2pt;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  font-size: 8pt;
+ font-family: sans-serif;
+letter-spacing: normal;    
+}
+
+.images:hover {
+     filter: blur(0px);
+  -webkit-filter: blur(0px);
+    }
+
+
+#chaptertitle {
+    font-size: 14pt;
+    font-family: sans-serif;
+    letter-spacing: normal;
+    margin-left: 2rem;
+    color:deeppink;
+}
+
+#subchaptertitle {
+    font-size: 12pt;
+    font-family: sans-serif;
+    letter-spacing: normal;
+    margin-left: 2rem;
+    color:deeppink;
+}
+
+#quote { font-size: 12pt;
+    font-family: sans-serif;
+    letter-spacing: normal;
+    color: blue;
+    position: static;
+}
+    
+
+/*FOOTNOTES*/
+/* Hiding and showing the popup div */
+
+
+.popup_content {
+    display: none;
+    position: absolute;
+}
+
+.show {
+  display:block;
+}
+
+/* Styling the button and the link */
+
+#footnotebutton {font-size: 8pt;
+    font-family: sans-serif;
+    margin-bottom: 0;
+    color:black;
+    background: blue;
+    border: none;
+    animation: 2s infinite alternate blurMe ease-out;
+}
+
+@keyframes blurMe {
+  from {
+    filter: blur( 0px ) saturate(0);
+  }
+  to {
+    filter: blur( 25px ) saturate(100);
+  }
+}
+
+/* styling the popup*/
+
+#popup_content {
+  text-indent: none;
+  background-color:white;
+  margin: auto;
+  padding: 8pt;
+  align-content: center;
+  font-family:sans-serif;
+  font-size:8pt;
+}
+
+/*MAIN TEXT PART*/
+
+.main{ background: white;
+	height: 100vh;
+    margin: auto;
+    padding: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 0;
+    font-size: 12pt;
+    font-family: sans-serif;
+    letter-spacing: normal;
+    line-height: 1; 
+    z-index: 95;
+}
+
+/*NAVIGATION BAR-FOOTER*/
+
+.footer {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    text-align: left;
+    padding: 2pt;
+    background-color: white;
+    margin: auto;
+    z-index: 98;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    word-spacing: 10pt;
+}
+
+.footer a:hover {
+     color: lawngreen;
+}
