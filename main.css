@@ -1,27 +1,82 @@
-/*HEADER*/
-.header {
-    font-family: sans-serif;
-    font-size: 20pt;
-    margin: auto;
-    top:0;
-    position: fixed;
-    background-color: white;  
-    z-index: 95;
-    padding-bottom:5px;  
-    width: 100vw;
+@charset "UTF-8";
+
+/* VARIABLES */
+
+:root {
+  /* Font settings */
+  --font-family: sans-serif;
+  --font-size: 12px;
 }
 
-/*BODY*/
 
-.intro {
-  display:block;
-  width:100vh;
-  height:100vh; 
+@font-face {
+	font-family: 'AkzidenzGrotesk-Regular';
+	src: url('fonts/AkzidenzGrotesk-Regular.otf');  
+    format('otf');
+}
+
+/*Landing Variable Font Animation*/
+@keyframes vars {
+  0% {
+    font-variation-settings: "MONO" 0, "CASL" 1, "CRSV" 0, "wght" 1000, "slnt" 0;
+  }
+    
+  25% {
+   font-variation-settings: "MONO" 0, "CASL" 0, "CRSV" 0, "wght" 600, "slnt" 0;
+  } 
   
+ 50% {
+    font-variation-settings: "MONO" 0, "CASL" 1, "CRSV" 0, "wght" 600, "slnt" -15;
+  } 
+  
+  75% {
+    font-variation-settings: "MONO" 0, "CASL" 0, "CRSV" 1, "wght" 300, "slnt" -10;
+  } 
+  
+  100% {
+    font-variation-settings: "MONO" 0, "CASL" 1, "CRSV" 0, "wght" 1000, "slnt" 0;
+  }
 }
 
-.colorblock{
-    background: linear-gradient(180deg, white, #006fff, #afff00, #ff6300, #7d00ff, #ff0000);
+
+@font-face {
+  font-family: 'Recursive VF';
+  font-style: oblique -15deg 0deg; 
+  font-weight: 300 1000;
+  font-display: swap;
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/13034/Recursive_VF_1.043--subset_range_english_basic.woff2') format('woff2');
+}
+
+:root {
+  --dur:10s;
+}
+
+h1 {  margin-left: 1rem;
+    font-size: 5rem;
+  font-variation-settings: "MONO" 0, "CASL" 0, "CRSV" 0, "wght" 1000, "slnt" 0;
+    background: -webkit-linear-gradient(black, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color:black; 
+  // will-change:font-variation-settings;
+  animation: vars var(--dur) infinite linear both;
+}
+
+.wrap {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+  width: 100vw;
+     font-family: "Recursive VF", sans-serif;
+ background: none;
+ text-shadow: 0 0 10px white, 0 0 10px white;
+ -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color:white;
+}
+
+/*FULL BG*/
+body { background: linear-gradient(180deg, white, #006fff, #d6ff8f, white, #ff6300, #c8a0f2,white, #ff0000, white);
     background-size: 400% 400%;
     height: 100vh;
     margin: auto;
@@ -46,6 +101,21 @@
     50%{background-position:50% 100%}
     100%{background-position:50% 0%}
 }
+
+
+/*HEADER*/
+.header {
+    font-family: sans-serif;
+    font-size: 20pt;
+    margin: auto;
+    top:0;
+    position: fixed;
+    background-color: white;  
+    z-index: 95;
+    padding-bottom:5px;  
+    width: 100vw;
+}
+
 
 /*IMAGES*/
 .images {
@@ -76,53 +146,86 @@ letter-spacing: normal;
   -webkit-filter: blur(0px);
     }
 
-
+/*TITLES*/
 #chaptertitle {
-    font-size: 14pt;
-    font-family: sans-serif;
+    font: var(--font-size) 
+    var(--font-family);
+    font-family: AkzidenzGrotesk-Regular;
     letter-spacing: normal;
-    margin-left: 2rem;
-    color:deeppink;
+    margin-left: 0;
+    color:black;
+    text-shadow: 0 0 2px black, 0 0 2px black;
+ -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color:black;
 }
 
 #subchaptertitle {
-    font-size: 12pt;
-    font-family: sans-serif;
+    font-family: AkzidenzGrotesk-Regular;
     letter-spacing: normal;
-    margin-left: 2rem;
-    color:deeppink;
+    margin-right: 1rem;
+    color:black;
+     text-shadow: 0 0 2px black, 0 0 2px black;
+ -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color:black;
 }
 
-#quote { font-size: 12pt;
-    font-family: sans-serif;
+
+.quote {  font: var(--font-size) var(--font-family);
+    font-family: AkzidenzGrotesk-Regular;
     letter-spacing: normal;
-    color: blue;
-    position: static;
+    color: black;
+    padding-left: 5rem;
 }
     
 
 /*FOOTNOTES*/
 /* Hiding and showing the popup div */
-
-
-.popup_content {
-    display: none;
-    position: absolute;
-}
-
-.show {
-  display:block;
-}
-
 /* Styling the button and the link */
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+   animation: 2s infinite alternate blurMe ease-out;  
+   color:blue;
+}
 
-#footnotebutton {font-size: 8pt;
-    font-family: sans-serif;
-    margin-bottom: 0;
-    color:black;
-    background: blue;
-    border: none;
-    animation: 2s infinite alternate blurMe ease-out;
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  font-family: AkzidenzGrotesk-Regular;
+  width: 160px;
+  background-color:white;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
 }
 
 @keyframes blurMe {
@@ -134,31 +237,21 @@ letter-spacing: normal;
   }
 }
 
-/* styling the popup*/
-
-#popup_content {
-  text-indent: none;
-  background-color:white;
-  margin: auto;
-  padding: 8pt;
-  align-content: center;
-  font-family:sans-serif;
-  font-size:8pt;
-}
 
 /*MAIN TEXT PART*/
 
-.main{ background: white;
+.main{ background: none;
 	height: 100vh;
     margin: auto;
     padding: 2rem;
     padding-top: 1rem;
     padding-bottom: 0;
-    font-size: 12pt;
-    font-family: sans-serif;
+    font: var(--font-size) var(--font-family);
+    font-family: AkzidenzGrotesk-Regular;
     letter-spacing: normal;
-    line-height: 1; 
+    line-height: 1.2; 
     z-index: 95;
+    color:black;
 }
 
 /*NAVIGATION BAR-FOOTER*/
@@ -170,8 +263,8 @@ letter-spacing: normal;
     bottom: 0;
     text-align: left;
     padding: 2pt;
-    background-color: white;
-    margin: auto;
+    background-color: none;
+    margin: 0;
     z-index: 98;
 }
 
@@ -184,4 +277,116 @@ letter-spacing: normal;
 
 .footer a:hover {
      color: lawngreen;
+}
+
+
+/* GENERAL USABILITY */
+
+/* hide desktop mobile etc */
+
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+/* if you want to hide something visually but want to keep it readable / accessible for screen readers (sr) */
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+/* MEDIA QUERIES */
+
+/* responsive typeface */
+
+@media (max-width: 298px) { 
+  :root{ --font-size: 15px; } html, body {font: var(--font-size) var(--font-family);} 
+}
+@media (min-width: 299px) and (max-width: 339px) { 
+  :root{ --font-size: 16px; } html, body {font: var(--font-size) var(--font-family);} 
+}
+@media (min-width: 340px) and (max-width: 439px) { 
+  :root{ --font-size: 17px; } html, body {font: var(--font-size) var(--font-family);} 
+}
+@media (min-width: 440px) and (max-width: 599px) { 
+  :root{ --font-size: 18px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 600px) and (max-width: 779px) { 
+  :root{ --font-size: 19px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 780px) and (max-width: 992px) { 
+  :root{ --font-size: 20px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 993px) and (max-width: 1200px) { 
+  :root{ --font-size: 22px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 1201px) and (max-width: 1319px) { 
+  :root{ --font-size: 24px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 1320px) and (max-width: 1619px) { 
+  :root{ --font-size: 26px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 1620px) and (max-width: 1879px) { 
+  :root{ --font-size: 28px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 1880px) { 
+  :root{ --font-size: 30px; } html, body {font: var(--font-size) var(--font-family);}
+}
+
+
+
+/* website media queries */
+
+@media (max-width: 779px) {
+
+  /* styles for screen sizes 779px, should covers 'mobile' and 'tablet' */
+  /* style this one first and then use the two others to 'override' some styles (exceptions/details) */
+
+
+
+
+
+
+  /* utilities */
+
+  .desktop{display:none!important;}
+  .mobile{display:block;}
+
+}
+
+
+
+@media (max-width: 339px) {
+
+  /* use this query to apply style changes to smaller smartphones sizes (like an iPhone 5S or SE 2016), max size of 339px */
+
+}
+
+
+
+@media (max-width: 779px) and (orientation: landscape) {
+
+  /* use this query to apply style changes for 'mobile' screen sizes that are flipped in 'landscape' mode */
+
+}
+
+
+
+@media (min-width: 780px) and (max-width: 992px) {
+
+  /* use this query to apply style for 'small' desktop screens */
+
 }
