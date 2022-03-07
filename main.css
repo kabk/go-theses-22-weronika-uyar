@@ -174,7 +174,7 @@ letter-spacing: normal;
     font-family: AkzidenzGrotesk-Regular;
     letter-spacing: normal;
     color: black;
-    padding-left: 5rem;
+    padding-left: 3rem;
 }
     
 
@@ -246,7 +246,7 @@ letter-spacing: normal;
     color:black;
 }
 
-div.bibliography{
+#bibliography{
     word-wrap: break-word;
     word-break: break-all;
 }
@@ -257,7 +257,7 @@ div.bibliography{
     position: sticky;
     display: flex;
     justify-content: space-between;
-    bottom: 0;
+    bottom: 0.3rem;
     text-align: left;
     padding: 2pt;
     background-color: none;
@@ -265,18 +265,17 @@ div.bibliography{
     z-index: 98;
 }
 
-.footer a {
+.footer a{
     text-decoration: none;
     color: black;
-    filter: saturate(100);
-    
-    
 }
 
-.footer a:hover {
-     color: lawngreen;
+.footer a:hover{
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+    
 }
-
 
 /* GENERAL USABILITY */
 
