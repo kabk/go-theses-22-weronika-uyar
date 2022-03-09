@@ -200,8 +200,8 @@ letter-spacing: normal;
 .popup .popuptext {
   visibility: hidden;
   font-family: AkzidenzGrotesk-Regular;
-  width: 10rem;
-  font-size: 12pt;
+  width: 6.5rem;
+  font-size: 10pt;
   background-color:white;
   color: blue;
   text-align: center;
@@ -211,7 +211,8 @@ letter-spacing: normal;
   z-index: 1;
   bottom: 100%;
   left: 30%;
-  margin-left: -80px;
+  margin-left: -55px;
+    margin-right: -120px;
 }
 
 
@@ -271,6 +272,13 @@ letter-spacing: normal;
 }
 
 .footer a:hover{
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+    
+}
+
+footer a:active{
     text-decoration: none;
     color: black;
     font-size: 40px;
