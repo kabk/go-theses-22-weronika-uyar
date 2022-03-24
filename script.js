@@ -98,3 +98,14 @@ function myFunction20() {
   var popup = document.getElementById("myPopup20");
   popup.classList.toggle("show");
 }
+
+/////
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.bottom = "0";
+  } else {
+    document.getElementById("navbar").style.bottom = "50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
