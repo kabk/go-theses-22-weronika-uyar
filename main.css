@@ -174,7 +174,7 @@ letter-spacing: normal;
     font-family: AkzidenzGrotesk-Regular;
     letter-spacing: normal;
     color: black;
-    padding-left: 3rem;
+    padding-left: 2.5rem;
 }
     
 
@@ -247,9 +247,36 @@ letter-spacing: normal;
     color:black;
 }
 
+
 #bibliography{
     word-wrap: break-word;
     word-break: break-all;
+    color:white;
+    margin:0;
+    padding: 0;   
+}
+
+
+#bibliochaptertitle {
+    font: var(--font-size) 
+    var(--font-family);
+    font-family: AkzidenzGrotesk-Regular;
+    letter-spacing: normal;
+    margin-left: 0;
+    color:white;
+    text-shadow: 0 0 2px white, 0 0 2px white;
+ -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color:white;
+}
+
+#bibliosubchaptertitle {
+    font-family: AkzidenzGrotesk-Regular;
+    letter-spacing: normal;
+    margin-right: 1rem;
+    color:white;
+     text-shadow: 0 0 2px white, 0 0 2px white;
+ -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color:white;
 }
 
 /*NAVIGATION BAR-FOOTER*/
