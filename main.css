@@ -51,7 +51,8 @@
   --dur:10s;
 }
 
-h1 {  margin-left: 2rem;
+h1 { padding-left: 1rem;
+    margin-left: 2rem;
     font-size: 5rem;
   font-variation-settings: "MONO" 0, "CASL" 0, "CRSV" 0, "wght" 1000, "slnt" 0;
     background: -webkit-linear-gradient(black, black);
