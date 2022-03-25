@@ -116,7 +116,6 @@ body { background: linear-gradient(180deg, white, #006fff, #d6ff8f, white, #ff63
     width: 100vw;
 }
 
-
 /*IMAGES*/
 .images {
     width: 200px;
@@ -213,6 +212,7 @@ letter-spacing: normal;
   left: 30%;
   margin-left: -55px;
   margin-right: -120px;
+ padding: 0.5rem;
 }
 
 
