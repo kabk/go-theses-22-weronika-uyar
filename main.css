@@ -80,6 +80,7 @@ body { background: linear-gradient(180deg, white, #006fff, #d6ff8f, white, #ff63
     background-size: 400% 400%;
     height: 100vh;
     margin: auto;
+    will-change: background;
 
     -webkit-animation: gradient 120s ease infinite;
     -moz-animation: gradient 120s ease infinite;
@@ -119,13 +120,13 @@ body { background: linear-gradient(180deg, white, #006fff, #d6ff8f, white, #ff63
 /*IMAGES*/
 .images {
     width: 200px;
-    filter: blur(10px);
-  -webkit-filter: blur(10px);
+    filter: blur(5px);
+  -webkit-filter: blur(5px);
     display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-   
+  will-change: filter;
     }
 
 #imagesubtitle {
@@ -299,6 +300,7 @@ letter-spacing: normal;
     filter: blur(200);
     animation: 15s infinite alternate blurMe ease-out;
     margin-bottom: 10px;
+    will-change: filter;
 }
 
 .footer a{
