@@ -184,6 +184,7 @@ letter-spacing: normal;
 .footnotenumber{
   color: blue;
    animation: 2s infinite alternate blurMe ease-out; 
+  cursor: pointer;
 }
 
 .popup {
@@ -246,6 +247,7 @@ letter-spacing: normal;
     line-height: 1.2; 
     z-index: 95;
     color:black;
+    overflow-x: hidden;
 }
 
 
@@ -254,7 +256,7 @@ letter-spacing: normal;
     word-break: break-all;
     color:white;
     margin:0;
-    padding: 0;   
+    padding: 0;  
 }
 
 
