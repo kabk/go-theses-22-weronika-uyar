@@ -60,19 +60,21 @@ h1 { margin-left: 2rem;
   color:black; 
   // will-change:font-variation-settings;
   animation: vars var(--dur) infinite linear both;
+  z-index:94;
 }
 
 .wrap {
   display:flex;
   justify-content: center;
   align-items: center;
-  height:100vh;
-  width: 100vw;
+  height:100%;
+  width: 100%;
      font-family: "Recursive VF", sans-serif;
  background: none;
  text-shadow: 0 0 10px white, 0 0 10px white;
  -webkit-text-stroke-width: 4px;
   -webkit-text-stroke-color:white;
+  z-index:97;
 }
 
 /*FULL BG*/
