@@ -114,7 +114,8 @@ body { background: linear-gradient(180deg, white, #006fff, #d6ff8f, white, #ff63
     background-color: white;  
     z-index: 95;
     padding-bottom:5px;  
-    width: 100vw;
+    width: 100%;
+     overflow-x: hidden;
 }
 
 /*IMAGES*/
