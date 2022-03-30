@@ -63,7 +63,7 @@ h1 { padding: 1.5rem;
   // will-change:font-variation-settings;
   animation: vars var(--dur) infinite linear both;
   position: fixed;
-  z-index: 90;
+  z-index: 90;  
 }
 
 /*MAIN TEXT PART*/
@@ -92,9 +92,11 @@ h1 { padding: 1.5rem;
   width: 100vw;
      font-family: "Recursive VF", sans-serif;
  background: none;
+color:white;
  text-shadow: 0 0 10px white, 0 0 10px white;
  -webkit-text-stroke-width: 4px;
   -webkit-text-stroke-color:white;
+ filter: opacity(80%);    
 }
 
 /*FULL BG*/
