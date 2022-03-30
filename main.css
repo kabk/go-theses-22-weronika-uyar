@@ -51,7 +51,27 @@
   --dur:10s;
 }
 
-h1 { margin-left: 2rem;
+
+/*MAIN TEXT PART*/
+
+.main{  
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    padding: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 0;
+    font: var(--font-size) var(--font-family);
+    font-family: AkzidenzGrotesk-Regular;
+    letter-spacing: normal;
+    line-height: 1.2; 
+    z-index: 99;
+    color:black; 
+    overflow-x: hidden;
+}
+
+
+h1 { margin-top: 40vh;
     font-size: 5rem;
   font-variation-settings: "MONO" 0, "CASL" 0, "CRSV" 0, "wght" 1000, "slnt" 0;
     background: -webkit-linear-gradient(black, black);
@@ -61,20 +81,22 @@ h1 { margin-left: 2rem;
   // will-change:font-variation-settings;
   animation: vars var(--dur) infinite linear both;
   z-index:94;
+     width: 100vw;
+    height: 100vh;
 }
 
 .wrap {
   display:flex;
   justify-content: center;
   align-items: center;
-  height:100%;
-  width: 100%;
-     font-family: "Recursive VF", sans-serif;
+ height: 100vh;
+  width: 100vw;
+    font-family: "Recursive VF", sans-serif;
  background: none;
  text-shadow: 0 0 10px white, 0 0 10px white;
  -webkit-text-stroke-width: 4px;
   -webkit-text-stroke-color:white;
-  z-index:97;
+  z-index:97;   
 }
 
 /*FULL BG*/
@@ -117,7 +139,7 @@ body { background: linear-gradient(180deg, white, #006fff, #d6ff8f, white, #ff63
     z-index: 95;
     padding-bottom:5px;  
     width: 100%;
-     overflow-x: hidden;
+     
 }
 
 /*IMAGES*/
@@ -236,24 +258,8 @@ letter-spacing: normal;
 }
 
 
-/*MAIN TEXT PART*/
 
-.main{ background: none;
-	height: 100vh;
-    margin: auto;
-    padding: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 0;
-    font: var(--font-size) var(--font-family);
-    font-family: AkzidenzGrotesk-Regular;
-    letter-spacing: normal;
-    line-height: 1.2; 
-    z-index: 95;
-    color:black;
-    overflow-x: hidden;
-}
-
-
+/*BIBLIOGRAPHY*/
 #bibliography{
     word-wrap: break-word;
     word-break: break-all;
@@ -287,7 +293,7 @@ letter-spacing: normal;
 
 /*NAVIGATION BAR-FOOTER*/
 
-.footer {
+.navigation {
     position: sticky;
     display: flex;
     justify-content: space-between;
@@ -308,19 +314,19 @@ letter-spacing: normal;
     will-change: filter;
 }
 
-.footer a{
+.navigation a{
     text-decoration: none;
     color: black;
 }
 
-.footer a:hover{
+.navigation a:hover{
     text-decoration: none;
     color: black;
     font-size: 40px;
     
 }
 
-footer a:active{
+.navigation a:active{
     text-decoration: none;
     color: black;
     font-size: 40px;
