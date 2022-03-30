@@ -15,6 +15,46 @@
     format('otf');
 }
 
+
+@font-face {
+  font-family: 'Recursive VF';
+  font-style: oblique -15deg 0deg; 
+  font-weight: 300 800;
+  font-display: block;
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/13034/Recursive_VF_1.043--subset_range_english_basic.woff2') format('woff2');
+}
+
+/*VARIABLE ANIMATION*/
+
+h1 {margin-top: 0.5rem;
+    font-size: 5rem;
+    text-align: left;
+  font-variation-settings: "MONO" 0, "CASL" 0, "CRSV" 0, "wght" 1000, "slnt" 0;
+    background: -webkit-linear-gradient(black, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color:black; 
+  // will-change:font-variation-settings;
+  animation: vars var(--dur) infinite linear both;
+  position: relative;
+  z-index: 90;  
+}
+
+.wrap {
+  display:flex;
+justify-content: center;
+  align-items: center;
+  height:100vh;
+  width: auto;
+font-family: "Recursive VF", sans-serif;
+ background: none;
+color:white;
+ text-shadow: 0 0 10px white, 0 0 10px white;
+ -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color:white;  
+    z-index: 94;
+}
+
 /*Landing Variable Font Animation*/
 @keyframes vars {
   0% {
@@ -38,38 +78,16 @@
   }
 }
 
-
-@font-face {
-  font-family: 'Recursive VF';
-  font-style: oblique -15deg 0deg; 
-  font-weight: 300 1000;
-  font-display: swap;
-  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/13034/Recursive_VF_1.043--subset_range_english_basic.woff2') format('woff2');
-}
-
 :root {
   --dur:10s;
 }
 
-h1 { padding: 1.5rem;
-    margin-top: 0.5rem;
-    font-size: 5rem;
-    text-align: left;
-  font-variation-settings: "MONO" 0, "CASL" 0, "CRSV" 0, "wght" 1000, "slnt" 0;
-    background: -webkit-linear-gradient(black, black);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color:black; 
-  // will-change:font-variation-settings;
-  animation: vars var(--dur) infinite linear both;
-  position: relative;
-  z-index: 90;  
-}
 
 /*MAIN TEXT PART*/
 
 .main{ background: none;
 	height: 100vh;
+    width: auto;
     margin: auto;
     padding: 2rem;
     padding-top: 1rem;
@@ -83,22 +101,10 @@ h1 { padding: 1.5rem;
     overflow-x: hidden;
     overflow-y: auto;
     position: absolute;
+    display: block;
 }
 
-.wrap {
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  height:100vh;
-  width: 100vw;
-     font-family: "Recursive VF", sans-serif;
- background: none;
-color:white;
- text-shadow: 0 0 10px white, 0 0 10px white;
- -webkit-text-stroke-width: 4px;
-  -webkit-text-stroke-color:white;  
-    z-index: 94;
-}
+
 
 /*FULL BG*/
 body { background: linear-gradient(180deg, white, #006fff, #d6ff8f, white, #ff6300, #c8a0f2,white, #ff0000, white);
@@ -129,19 +135,6 @@ body { background: linear-gradient(180deg, white, #006fff, #d6ff8f, white, #ff63
     100%{background-position:50% 0%}
 }
 
-
-/*HEADER*/
-.header {
-    font-family: sans-serif;
-    font-size: 20pt;
-    margin: auto;
-    top:0;
-    position: fixed;
-    background-color: white;  
-    z-index: 95;
-    padding-bottom:5px;  
-    width: 100vw;
-}
 
 /*IMAGES*/
 .images {
@@ -260,6 +253,7 @@ letter-spacing: normal;
 
 
 
+/* biblio */
 #bibliography{
     word-wrap: break-word;
     word-break: break-all;
@@ -302,7 +296,7 @@ letter-spacing: normal;
     background-color: none;
     margin: 0;
     z-index: 98;
-
+    position: relative;
 }
 
 .navimage {
