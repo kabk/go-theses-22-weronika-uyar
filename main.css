@@ -62,7 +62,7 @@ h1 { padding: 1.5rem;
   color:black; 
   // will-change:font-variation-settings;
   animation: vars var(--dur) infinite linear both;
-  position: fixed;
+  position: relative;
   z-index: 90;  
 }
 
@@ -81,6 +81,7 @@ h1 { padding: 1.5rem;
     z-index: 95;
     color:black;
     overflow-x: hidden;
+    overflow-y: auto;
     position: absolute;
 }
 
@@ -95,8 +96,8 @@ h1 { padding: 1.5rem;
 color:white;
  text-shadow: 0 0 10px white, 0 0 10px white;
  -webkit-text-stroke-width: 4px;
-  -webkit-text-stroke-color:white;
- filter: opacity(80%);    
+  -webkit-text-stroke-color:white;  
+    z-index: 94;
 }
 
 /*FULL BG*/
@@ -104,6 +105,7 @@ body { background: linear-gradient(180deg, white, #006fff, #d6ff8f, white, #ff63
     background-size: 400% 400%;
     height: 100vh;
     margin: auto;
+     overflow-x: hidden;
     will-change: background;
 
     -webkit-animation: gradient 120s ease infinite;
@@ -292,7 +294,6 @@ letter-spacing: normal;
 /*NAVIGATION BAR-FOOTER*/
 
 .navigation {
-    position: sticky;
     display: flex;
     justify-content: space-between;
     bottom: 0.3rem;
@@ -301,6 +302,7 @@ letter-spacing: normal;
     background-color: none;
     margin: 0;
     z-index: 98;
+
 }
 
 .navimage {
