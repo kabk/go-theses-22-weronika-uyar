@@ -121,7 +121,6 @@ body { background: linear-gradient(180deg, white, #006fff, #d6ff8f, white, #ff63
     background-size: 400% 400%;
     height: 100vh;
     margin: auto;
-     overflow-x: hidden;
     will-change: background;
 
     -webkit-animation: gradient 120s ease infinite;
