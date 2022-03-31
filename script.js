@@ -99,6 +99,26 @@ function myFunction20() {
   popup.classList.toggle("show");
 }
 
+function myFunction21() {
+  var popup = document.getElementById("myPopup21");
+  popup.classList.toggle("show");
+}
+
+function myFunction22() {
+  var popup = document.getElementById("myPopup22");
+  popup.classList.toggle("show");
+}
+
+function myFunction23() {
+  var popup = document.getElementById("myPopup23");
+  popup.classList.toggle("show");
+}
+
+function myFunction24() {
+  var popup = document.getElementById("myPopup24");
+  popup.classList.toggle("show");
+}
+
 /////
 window.onscroll = function() {
 var currentScrollPos = window.pageYOffset;
