@@ -37,9 +37,11 @@ header { background: none;
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    overflow-x: hidden;
-   
+    padding-right: 0.5rem; 
+     color:white;
+    text-shadow: 0 0 2px white, 0 0 2px white;
+    -webkit-text-stroke-width: 1px;
+     -webkit-text-stroke-color:white;
 }
 
 
@@ -49,8 +51,8 @@ header { background: none;
     display: flex;
     margin:0.5rem;
     justify-content: space-between;
-    bottom: 0.3rem;
-    line-height: 0.3;
+    bottom: 0.5rem;
+    line-height: 1.2;
     z-index: 98;
     font-size: 8pt;
     text-align: center;
@@ -80,7 +82,8 @@ header { background: none;
 
 /*VARIABLE ANIMATION*/
 
-h1 {margin-top: 0.5rem;
+h1 {
+    margin-top: 0.5rem;
     font-size: 5rem;
     text-align: left;
   font-variation-settings: "MONO" 0, "CASL" 0, "CRSV" 0, "wght" 1000, "slnt" 0;
@@ -99,7 +102,6 @@ h1 {margin-top: 0.5rem;
 justify-content: center;
   align-items: center;
   height:100vh;
-  width: auto;
 font-family: "Recursive VF", sans-serif;
  background: none;
 color:white;
@@ -140,9 +142,10 @@ color:white;
 /*MAIN TEXT PART*/
 
 .main{ background: none;
-	height: 100vh;
-    width: auto;
+	height: auto;
+    width: 90%;
     margin: auto;
+    overflow-x: hidden;
     padding: 2rem;
     padding-top: 1rem;
     padding-bottom: 0;
@@ -152,8 +155,6 @@ color:white;
     line-height: 1.2; 
     z-index: 95;
     color:black;
-    overflow-x: hidden;
-    overflow-y: auto;
     position: absolute;
     display: block;
 }
@@ -161,15 +162,15 @@ color:white;
 
 
 /*FULL BG*/
-body { background: linear-gradient(180deg, white, #006fff, #d6ff8f, white, #ff6300, #c8a0f2,white, #ff0000, white);
+body { background: linear-gradient(180deg, white, #006fff, #d6ff8f, white, #ff6300,black, #c8a0f2,white, #ff0000,white);
     background-size: 400% 400%;
     height: 100vh;
     margin: auto;
     will-change: background;
 
-    -webkit-animation: gradient 120s ease infinite;
-    -moz-animation: gradient 120s ease infinite;
-    animation: gradient 120s ease infinite;
+    -webkit-animation: gradient 150s ease infinite;
+    -moz-animation: gradient 150s ease infinite;
+    animation: gradient 150s ease infinite;
 }
 
 @-webkit-keyframes gradient {
@@ -418,6 +419,7 @@ letter-spacing: normal;
 
 @media (max-width: 779px) {
 
+    
   /* styles for screen sizes 779px, should covers 'mobile' and 'tablet' */
   /* style this one first and then use the two others to 'override' some styles (exceptions/details) */
 
