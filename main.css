@@ -353,7 +353,7 @@ letter-spacing: normal;
 }
 
 .mobile {
-  display: block;
+  display: none;
 }
 
 /* if you want to hide something visually but want to keep it readable / accessible for screen readers (sr) */
