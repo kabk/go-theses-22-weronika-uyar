@@ -42,6 +42,7 @@ header { background: none;
     padding-bottom: 1rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    overflow-x: hidden;
    
 }
 
@@ -58,6 +59,7 @@ header { background: none;
     font-size: 8pt;
     text-align: center;
     background: none;
+
 }
 
 .navimage {
